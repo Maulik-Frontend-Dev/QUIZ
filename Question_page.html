@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Question View - QUIZ.ED</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="Home_page.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1e",
+                        "inverse-surface": "#2e3132",
+                        "surface-bright": "#f8f9fb",
+                        "on-error-container": "#410002",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#474747",
+                        "primary": "#000000",
+                        "surface-dim": "#d9dadc",
+                        "error": "#ba1a1a",
+                        "outline": "#777777",
+                        "outline-variant": "#c6c6c6",
+                        "on-primary-container": "#ffffff",
+                        "on-surface-variant": "#474747",
+                        "primary-fixed": "#5e5e5e",
+                        "secondary-fixed-dim": "#ababab",
+                        "on-tertiary-fixed-variant": "#e2e2e2",
+                        "secondary": "#5e5e5e",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "surface-container-low": "#f3f4f6",
+                        "tertiary": "#3b3b3b",
+                        "surface-container-high": "#e7e8ea",
+                        "tertiary-fixed": "#5e5e5e",
+                        "on-tertiary-fixed": "#ffffff",
+                        "on-tertiary-container": "#ffffff",
+                        "background": "#f8f9fb",
+                        "surface": "#f8f9fb",
+                        "tertiary-container": "#747474",
+                        "secondary-fixed": "#c6c6c6",
+                        "secondary-container": "#d4d4d4",
+                        "surface-tint": "#5e5e5e",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#e2e2e2",
+                        "tertiary-fixed-dim": "#474747",
+                        "surface-container": "#edeef0",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-primary-fixed": "#ffffff",
+                        "on-secondary-container": "#1b1b1b",
+                        "primary-container": "#3b3b3b",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e1e2e4",
+                        "surface-container-highest": "#e1e2e4",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "on-primary": "#e2e2e2",
+                        "on-surface": "#191c1e"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .quiz-panel-enter {
+            animation: quizPanelEnter 380ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes quizPanelEnter {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background min-h-screen flex flex-col dark:bg-[#101214] dark:text-white">
+    <header
+        class="bg-white/80 dark:bg-black/70 backdrop-blur-md fixed top-0 w-full z-50 flex items-center justify-between px-6 h-16 shadow-md">
+        <div class="flex items-center gap-4">
+            <a class="text-xl font-black tracking-tighter text-black dark:text-white font-headline"
+                href="Home_page.html">QUIZ.ED</a>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+            <a class="text-black dark:text-white font-bold font-headline transition-opacity hover:opacity-70"
+                href="Home_page.html">Play</a>
+            <a class="text-gray-500 dark:text-gray-400 font-headline transition-opacity hover:opacity-70"
+                href="Leaderboard.html">Leaderboard</a>
+            <a class="text-gray-500 dark:text-gray-400 font-headline transition-opacity hover:opacity-70"
+                href="Badges.html">Badges</a>
+            <a class="text-gray-500 dark:text-gray-400 font-headline transition-opacity hover:opacity-70"
+                href="Settings.html">Settings</a>
+        </div>
+    </header>
+    <nav
+        class="md:hidden fixed bottom-0 w-full flex justify-around items-center h-16 px-4 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800 z-50">
+        <div class="flex flex-col items-center justify-center text-black dark:text-white border-t-2 border-black dark:border-white pt-2 transition-transform duration-200">
+            <a href="Home_page.html"><span class="material-symbols-outlined">play_circle</span>
+                <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-bold">Play</span></a>
+        </div>
+        <div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-600 pt-2 transition-transform duration-200">
+            <a href="Leaderboard.html"><span class="material-symbols-outlined">leaderboard</span>
+                <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-bold">Leaderboard</span></a>
+        </div>
+        <div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-600 pt-2 transition-transform duration-200">
+            <a href="Badges.html"><span class="material-symbols-outlined">military_tech</span>
+                <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-bold">Badges</span></a>
+        </div>
+        <div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-600 pt-2 transition-transform duration-200">
+            <a href="Settings.html"><span class="material-symbols-outlined">settings</span>
+                <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-bold">Settings</span></a>
+        </div>
+    </nav>
+    <main class="flex-grow pt-24 pb-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto w-full" data-quiz-app>
+        <div class="mb-12" data-premium-reveal>
+            <div class="flex justify-between items-end mb-4">
+                <div>
+                    <span class="text-[0.6875rem] uppercase tracking-[0.05em] font-bold text-secondary font-label"
+                        data-session-label>Session: Quiz Challenge</span>
+                    <h2 class="text-5xl font-black tracking-tighter text-primary dark:text-white mt-2">Question View
+                    </h2>
+                </div>
+                <div class="text-right">
+                    <span
+                        class="text-[0.6875rem] uppercase tracking-[0.05em] font-bold text-secondary font-label">Progress</span>
+                    <p class="text-2xl font-black tracking-tighter text-primary dark:text-white"><span
+                            data-progress-count>00</span><span class="text-outline-variant">/</span><span
+                            data-progress-total>10</span></p>
+                </div>
+            </div>
+            <div class="h-2 w-full bg-surface-container-high dark:bg-[#2b3138] rounded-full overflow-hidden">
+                <div class="h-full bg-primary dark:bg-white w-0 transition-all duration-500" data-progress-bar></div>
+            </div>
+        </div>
+
+        <div class="editorial-grid items-stretch gap-6 lg:gap-8" data-start-screen>
+            <div class="col-span-12 lg:col-span-8">
+                <div class="bg-surface-container-lowest dark:bg-[#17191c] p-8 md:p-12 mb-8 relative premium-card-hover h-full flex flex-col justify-between gap-8"
+                    data-premium-reveal>
+                    <span
+                        class="text-[0.6875rem] uppercase tracking-[0.05em] font-bold text-secondary font-label mb-6 block">Ready
+                        to Begin</span>
+                    <h3
+                        class="text-3xl md:text-4xl font-bold leading-tight tracking-tight text-primary dark:text-white mb-6">
+                        Ready to start your QUIZ.ED challenge?
+                    </h3>
+                    <p class="text-lg text-on-surface-variant dark:text-gray-400 leading-relaxed mb-8 max-w-2xl">
+                        You will get 10 random questions from the selected difficulty, one answer per question, and an
+                        automatic move to the next screen after each answer or timeout.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <button
+                            class="bg-primary text-on-primary-fixed-variant px-8 py-4 rounded-md font-bold text-lg transition-transform duration-300 hover:scale-[1.03]"
+                            data-start-quiz type="button">
+                            Start Quiz
+                        </button>
+                        <a class="bg-surface-container-high dark:bg-[#242930] text-primary dark:text-white px-8 py-4 rounded-md font-bold text-lg transition-transform duration-300 hover:scale-[1.03]"
+                            href="Home_page.html">
+                            Change Difficulty
+                        </a>
+                    </div>
+                    <div class="absolute top-0 right-0 w-24 h-24 overflow-hidden opacity-5 pointer-events-none">
+                        <span class="material-symbols-outlined text-[8rem] translate-x-8 -translate-y-8">rocket_launch</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-12 lg:col-span-4 flex flex-col gap-6 lg:gap-8 h-full">
+                <div class="bg-surface-container-low dark:bg-[#16191d] p-8 premium-card-hover flex-1 flex flex-col justify-between min-h-[180px]" data-premium-reveal>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary dark:text-white">timer</span>
+                        <span
+                            class="text-[0.6875rem] uppercase tracking-[0.05em] font-bold text-primary dark:text-white font-label">Time
+                            Remaining</span>
+                    </div>
+                    <div class="text-6xl font-black tracking-tighter text-primary dark:text-white"
+                        data-timer-value>--s</div>
+                </div>
+                <div class="bg-white dark:bg-[#17191c] p-8 border border-outline-variant/20 premium-card-hover flex-1 flex flex-col justify-center min-h-[220px]"
+                    data-premium-reveal>
+                    <span
+                        class="text-[0.6875rem] uppercase tracking-[0.05em] font-bold text-secondary font-label mb-4 block">Round
+                        Details</span>
+                    <div class="space-y-4 text-primary dark:text-white">
+                        <p class="font-bold">Difficulty: <span data-difficulty-label>Novice</span></p>
+                        <p class="font-bold">Player: <span data-player-name>Player</span></p>
+                        <p class="text-sm text-on-surface-variant dark:text-gray-400">Correct answers are highlighted
+                            instantly and the next question loads automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="editorial-grid hidden" data-quiz-screen>
+            <div class="col-span-12 lg:col-span-8">
+                <div class="bg-surface-container-lowest dark:bg-[#17191c] p-8 md:p-12 mb-8 relative premium-card-hover quiz-panel-enter"
+                    data-question-panel>
+                    <span class="text-[0.6875rem] uppercase tracking-[0.05em] font-bold text-secondary font-label mb-6 block"
+                        data-question-label>Question 01</span>
+                    <h3 class="text-3xl md:text-4xl font-bold leading-tight tracking-tight text-primary dark:text-white mb-10"
+                        data-question-text>
+                        Loading question...
+                    </h3>
+                    <div class="absolute top-0 right-0 w-24 h-24 overflow-hidden opacity-5 pointer-events-none">
+                        <span class="material-symbols-outlined text-[8rem] translate-x-8 -translate-y-8">brush</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-answer-grid></div>
+                <p class="mt-6 text-sm font-bold uppercase tracking-widest text-outline" data-answer-status>Select an
+                    answer to continue</p>
+            </div>
+            <div class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+                <div class="bg-surface-container-low dark:bg-[#16191d] p-8 premium-card-hover" data-premium-reveal>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary dark:text-white">timer</span>
+                        <span
+                            class="text-[0.6875rem] uppercase tracking-[0.05em] font-bold text-primary dark:text-white font-label">Time
+                            Remaining</span>
+                    </div>
+                    <div class="text-6xl font-black tracking-tighter text-primary dark:text-white"
+                        data-timer-value>45s</div>
+                    <div class="h-2 w-full bg-surface-container-high dark:bg-[#2b3138] rounded-full overflow-hidden mt-5">
+                        <div class="h-full bg-primary dark:bg-white transition-all duration-1000" style="width:100%"
+                            data-timer-bar></div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-[#17191c] p-8 border border-outline-variant/20 premium-card-hover"
+                    data-premium-reveal>
+                    <span
+                        class="text-[0.6875rem] uppercase tracking-[0.05em] font-bold text-secondary font-label mb-4 block">Quiz
+                        Stats</span>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="font-bold text-primary dark:text-white">Score</span>
+                            <span class="font-black text-primary dark:text-white" data-score-value>0</span>
+                        </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="font-bold text-primary dark:text-white">Correct</span>
+                            <span class="font-black text-primary dark:text-white" data-correct-value>0</span>
+                        </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="font-bold text-primary dark:text-white">Wrong</span>
+                            <span class="font-black text-primary dark:text-white" data-wrong-value>0</span>
+                        </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="font-bold text-primary dark:text-white">Difficulty</span>
+                            <span class="font-black text-primary dark:text-white" data-difficulty-label>Novice</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full py-12 bg-gray-100 dark:bg-black mt-20">
+        <div class="flex flex-col md:flex-row items-center justify-between px-10 gap-6">
+            <div class="font-black text-black dark:text-white tracking-tighter text-xl">QUIZ.ED</div>
+            <div class="font-['Inter'] text-[11px] uppercase tracking-widest text-gray-400">
+                © 2026 QUIZ.ED DIGITAL CURATOR
+            </div>
+        </div>
+    </footer>
+    <script src="app-shell.js"></script>
+    <script src="quiz-app.js" type="module"></script>
+</body>
+
+</html>

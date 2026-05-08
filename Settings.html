@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ.ED</title>
+    <link rel="stylesheet" href="Home_page.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1e",
+                        "inverse-surface": "#2e3132",
+                        "surface-bright": "#f8f9fb",
+                        "on-error-container": "#410002",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#c6c6c6",
+                        "primary-fixed-dim": "#474747",
+                        "primary": "#000000",
+                        "surface-dim": "#d9dadc",
+                        "error": "#ba1a1a",
+                        "outline": "#777777",
+                        "outline-variant": "#c6c6c6",
+                        "on-primary-container": "#ffffff",
+                        "on-surface-variant": "#474747",
+                        "primary-fixed": "#5e5e5e",
+                        "secondary-fixed-dim": "#ababab",
+                        "on-tertiary-fixed-variant": "#e2e2e2",
+                        "secondary": "#5e5e5e",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "surface-container-low": "#f3f4f6",
+                        "tertiary": "#3b3b3b",
+                        "surface-container-high": "#e7e8ea",
+                        "tertiary-fixed": "#5e5e5e",
+                        "on-tertiary-fixed": "#ffffff",
+                        "on-tertiary-container": "#ffffff",
+                        "background": "#f8f9fb",
+                        "surface": "#f8f9fb",
+                        "tertiary-container": "#747474",
+                        "secondary-fixed": "#c6c6c6",
+                        "secondary-container": "#d4d4d4",
+                        "surface-tint": "#5e5e5e",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#e2e2e2",
+                        "tertiary-fixed-dim": "#474747",
+                        "surface-container": "#edeef0",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-primary-fixed": "#ffffff",
+                        "on-secondary-container": "#1b1b1b",
+                        "primary-container": "#3b3b3b",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e1e2e4",
+                        "surface-container-highest": "#e1e2e4",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "on-primary": "#e2e2e2",
+                        "on-surface": "#191c1e"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-background font-body antialiased dark:bg-[#101214] dark:text-white">
+    <header
+        class="bg-white/80 dark:bg-black/70 backdrop-blur-md fixed top-0 w-full z-50 flex items-center justify-between px-6 h-16 shadow-md">
+        <div class="flex items-center gap-4">
+            <span class="text-xl font-black tracking-tighter text-black dark:text-white font-headline">QUIZ.ED</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+            <a class="text-gray-500 dark:text-gray-400 font-headline transition-opacity hover:opacity-70"
+                href="Home_page.html">Play</a>
+            <a class="text-gray-500 dark:text-gray-400 font-headline transition-opacity hover:opacity-70"
+                href="Leaderboard.html">Leaderboard</a>
+            <a class="text-gray-500 dark:text-gray-400 font-headline transition-opacity hover:opacity-70"
+                href="Badges.html">Badges</a>
+            <a class="text-black dark:text-white font-bold font-headline transition-opacity hover:opacity-70"
+                href="Settings.html">Settings</a>
+        </div>
+    </header>
+
+    <nav
+        class="md:hidden fixed bottom-0 w-full flex justify-around items-center h-16 px-4 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800 z-50">
+        <div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-600 pt-2 transition-transform duration-200">
+            <a href="Home_page.html"><span class="material-symbols-outlined">play_circle</span>
+                <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-bold">Play</span></a>
+        </div>
+        <div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-600 pt-2 transition-transform duration-200">
+            <a href="Leaderboard.html"><span class="material-symbols-outlined">leaderboard</span>
+                <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-bold">Leaderboard</span></a>
+        </div>
+        <div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-600 pt-2 transition-transform duration-200">
+            <a href="Badges.html"><span class="material-symbols-outlined">military_tech</span>
+                <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-bold">Badges</span></a>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-black dark:text-white border-t-2 border-black dark:border-white pt-2 transition-transform duration-200">
+            <a href="Settings.html"><span class="material-symbols-outlined">settings</span>
+                <span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-bold">Settings</span></a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-32 min-h-screen px-6 md:px-20 max-w-7xl mx-auto">
+        <section class="editorial-grid gap-y-10">
+            <div class="col-span-12 md:col-span-8 md:col-start-2 mt-12" data-premium-reveal>
+                <p class="text-[11px] uppercase tracking-[0.2em] font-bold text-outline mb-4">Profile Console</p>
+                <h1
+                    class="text-5xl md:text-8xl font-black font-headline tracking-[-0.04em] leading-[0.9] text-primary dark:text-white mb-8">
+                    Settings & Progress
+                </h1>
+                <p class="text-xl md:text-2xl text-on-surface-variant dark:text-gray-400 max-w-2xl leading-relaxed">
+                    Manage your profile, tune the experience, and monitor streaks, XP, and unlock progress in one
+                    place.
+                </p>
+            </div>
+
+            <div class="col-span-12 grid grid-cols-1 lg:grid-cols-3 gap-6 items-start" id="settings-app">
+                <div class="lg:col-span-2 space-y-6">
+                    <section
+                        class="bg-surface-container-lowest dark:bg-[#17191c] p-8 md:p-10 editorial-shadow rounded-xl premium-card-hover min-h-[212px]" data-premium-reveal>
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+                            <div class="flex items-center gap-5">
+                                <div
+                                    class="w-24 h-24 rounded-full bg-surface-container-high dark:bg-[#2a2e34] flex items-center justify-center text-3xl font-black tracking-tight text-primary dark:text-white" data-profile-initials>
+                                    P
+                                </div>
+                                <div>
+                                    <p class="text-[10px] uppercase tracking-widest font-bold text-outline mb-2">Quiz
+                                        Profile</p>
+                                    <h2 class="text-3xl font-black tracking-tight text-primary dark:text-white" data-profile-name>Player</h2>
+                                    <p class="text-on-surface-variant dark:text-gray-400" data-profile-meta>Last played: Never played</p>
+                                </div>
+                            </div>
+                            <button
+                                class="inline-flex items-center gap-3 bg-primary text-white px-6 py-3 rounded-md font-bold transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]" data-edit-profile type="button">
+                                <span class="material-symbols-outlined">edit</span>
+                                Edit Profile
+                            </button>
+                        </div>
+                    </section>
+
+                    <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4" id="stats-grid" data-premium-reveal></section>
+
+                    <section class="bg-surface-container-low dark:bg-[#16191d] p-8 md:p-10 rounded-xl premium-card-hover min-h-[360px]" data-premium-reveal>
+                        <div class="flex items-end justify-between mb-8 gap-6">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest font-bold text-outline mb-2">Progress
+                                    Overview</p>
+                                <h3 class="text-3xl font-black tracking-tight text-primary dark:text-white">Current
+                                    Momentum</h3>
+                            </div>
+                            <span class="material-symbols-outlined text-4xl text-primary dark:text-white">insights</span>
+                        </div>
+                        <div class="space-y-8" id="progress-grid"></div>
+                    </section>
+                </div>
+
+                <div class="space-y-6">
+                    <section class="bg-surface-container-lowest dark:bg-[#17191c] p-8 rounded-xl editorial-shadow premium-card-hover min-h-[360px]" data-premium-reveal>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-outline mb-6">Settings</p>
+                        <div class="space-y-5" id="settings-list"></div>
+                    </section>
+
+                    <section class="bg-primary text-white p-8 rounded-xl premium-card-hover min-h-[212px]" data-premium-reveal>
+                        <p class="text-[10px] uppercase tracking-widest font-bold text-on-primary-fixed-variant mb-3">
+                            Badge Snapshot</p>
+                        <h3 class="text-2xl font-black tracking-tight mb-4" data-badge-summary-title>0 badges earned</h3>
+                        <p class="text-white/80 leading-relaxed mb-6" data-badge-summary-copy>No badge progress yet. Finish a quiz to start earning achievements.</p>
+                        <a href="Badges.html"
+                            class="inline-flex items-center gap-3 font-bold text-white transition-opacity hover:opacity-80">
+                            View badge vault
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="fixed inset-0 bg-black/40 backdrop-blur-sm z-[60] hidden items-center justify-center px-6" data-profile-modal>
+        <div class="w-full max-w-md bg-surface-container-lowest dark:bg-[#17191c] rounded-xl editorial-shadow p-8">
+            <div class="flex items-start justify-between gap-4 mb-6">
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest font-bold text-outline mb-2">Profile Editor</p>
+                    <h3 class="text-3xl font-black tracking-tight text-primary dark:text-white">Edit Profile</h3>
+                </div>
+                <button class="text-primary dark:text-white" data-close-profile-modal type="button">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <form data-profile-form>
+                <label class="block mb-6">
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-outline mb-3 block">Player Name</span>
+                    <input
+                        class="w-full bg-surface-container-low dark:bg-[#242930] border-0 rounded-md px-4 py-4 font-bold text-primary dark:text-white placeholder:text-outline focus:ring-0"
+                        data-profile-input maxlength="24" placeholder="Enter player name" type="text" />
+                </label>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button
+                        class="flex-1 inline-flex items-center justify-center gap-3 bg-primary text-white px-6 py-3 rounded-md font-bold transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                        type="submit">
+                        Save Changes
+                    </button>
+                    <button
+                        class="flex-1 inline-flex items-center justify-center gap-3 bg-surface-container-high dark:bg-[#242930] text-primary dark:text-white px-6 py-3 rounded-md font-bold transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                        data-cancel-profile-modal type="button">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="w-full py-12 bg-gray-100 dark:bg-black mt-20">
+        <div class="flex flex-col md:flex-row items-center justify-between px-10 gap-6">
+            <div class="font-black text-black dark:text-white tracking-tighter text-xl">QUIZ.ED</div>
+            <div class="font-['Inter'] text-[11px] uppercase tracking-widest text-gray-400">
+                © 2026 QUIZ.ED DIGITAL CURATOR
+            </div>
+        </div>
+    </footer>
+
+    <script src="app-shell.js"></script>
+    <script src="settings.js" type="module"></script>
+</body>
+
+</html>
